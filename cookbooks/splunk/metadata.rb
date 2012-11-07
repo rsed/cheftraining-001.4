@@ -5,4 +5,4 @@ description      "Installs/Configures splunk"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          "0.0.1"
 
-recipe "splunk::default", "Installs splunk from a tar a file, as well as the package ‘tree’"
+recipe "splunk::default", "Installs splunk from a tar file, as well as the package ‘tree’"

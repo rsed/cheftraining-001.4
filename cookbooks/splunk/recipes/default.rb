@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-log "Installing Splunk - version 1"
+log "Installing Splunk version 4"
 
 user "splunk" do
  action :create
