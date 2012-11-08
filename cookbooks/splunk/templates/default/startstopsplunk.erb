@@ -1,1 +1,1 @@
-sudo -H -u <%= "#{node[:splunk][:user]}" %> <%= "#{node[:splunk][:installdir]}/bin/splunk" %> <%= @action %>
+sudo -H -u <%= "#{node[:splunk][:user]}" %> <%= "#{node[:splunk][:installdir]}/splunk/bin/splunk" %> <%= @action %>

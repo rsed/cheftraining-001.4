@@ -31,7 +31,7 @@ bash "install_splunk" do
   EOH
 end 
 
-template "#{node[:splunk][:installdir]}/bin/startsplunk" do
+template "#{node[:splunk][:installdir]}/splunk/bin/startsplunk" do
  source "startstopsplunk.erb"
  mode 0755
  action :create
@@ -40,7 +40,7 @@ template "#{node[:splunk][:installdir]}/bin/startsplunk" do
          })
 end
 
-template "#{node[:splunk][:installdir]}/bin/stopsplunk" do
+template "#{node[:splunk][:installdir]}/splunk/bin/stopsplunk" do
  source "startstopsplunk.erb"
  mode 0755
  action :create
@@ -49,7 +49,7 @@ template "#{node[:splunk][:installdir]}/bin/stopsplunk" do
          })
 end
 
-template "#{node[:splunk][:installdir]}/bin/restartsplunk" do
+template "#{node[:splunk][:installdir]}/splunk/bin/restartsplunk" do
  source "startstopsplunk.erb"
  mode 0755
  action :create
