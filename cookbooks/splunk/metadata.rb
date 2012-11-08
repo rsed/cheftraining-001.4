@@ -13,6 +13,5 @@ attribute "splunk/user",
 :display_name => "Splunk User",
 :description => "The name of the Splunk user",
 :recipes => ["splunk::install"],
-:default => "John",
-:required => "optional"
+:required => "required"
 
