@@ -3,4 +3,5 @@ define :set_user do
   action :create
   shell "/bin/bash"
  end 
+log "User #{user params[:name]} created"
 end 
