@@ -31,6 +31,16 @@ bash "install_splunk" do
   EOH
 end 
 
+log "Updating Splunk Configuration"
+bash "update_splunk_config" do
+cwd node[:splunk][:installdir]
+code <<-EOH
+  cd splunk/etc/system/
+  wget https://rsed-cheftraining.s3.amazonaws.com/splunk_update.tgz
+  gzip -cd splunk_update.tgz |tar xvf -
+ EOH
+end 
+
 template "#{node[:splunk][:installdir]}/splunk/bin/startsplunk" do
  source "startstopsplunk.erb"
  mode 0755
